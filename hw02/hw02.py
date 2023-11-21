@@ -31,7 +31,10 @@ def product(n, term):
     >>> product(3, triple)    # 1*3 * 2*3 * 3*3
     162
     """
-    "*** YOUR CODE HERE ***"
+    ans = 1
+    for i in range(1, n + 1):
+        ans = ans * term(i)
+    return ans
 
 
 def accumulate(merger, start, n, term):
